@@ -43,7 +43,7 @@ while True:
         continue
     else:
         text = (methods(arguments)) #La funcion methods se muestra cuanto con el argumento que la persona le da, el texto ya es convertido
-        print('Text has been copied to clipboard!:\n', text)
+        print('Text has been copied to clipboard!:\n', text,'\n')
         break
         
 pyperclip.copy(text)
