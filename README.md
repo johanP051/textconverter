@@ -4,4 +4,4 @@ python3 text.py
 
 You can select between: lower-case, upper-case, title, swap-case and capitalize.
 
-Thanks for use!!
+Thanks for use this tool!!
