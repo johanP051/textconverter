@@ -16,3 +16,8 @@ Insert the text here: example
 Insert the the item number here: 2 (between 1 and 5)
 
 #The text is automatically copied to the clipboard
+
+#NOTE:
+If you want to make it executable just make:
+"sudo chmod +x text.py"
+./text.py
