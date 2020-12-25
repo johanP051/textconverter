@@ -1,4 +1,7 @@
 # textconverter
+#REQUIRIMENTS:
+pyperclip
+
 Text converter use:
 python3 text.py
 
