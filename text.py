@@ -1,13 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
-import pyperclip, os
+import pyperclip, os, signal, sys
 print('@johanPosada')
+
+def signal_handler(signal, frame):
+    print('...Exiting...')
+    sys.exit(0)
+signal.signal(signal.SIGINT, signal_handler)
 
 text = input('Insert the text here: ')
 
 while text =='':
     text = input('Insert the text here: ')
-    
+
 def methods(arguments):
     
     switcher = {
@@ -18,12 +23,10 @@ def methods(arguments):
         5: text.capitalize()
     }
     
-    return switcher.get(arguments) #La función methods toma su argumento el cual es la función que se le da en el switch-case
-
+    return switcher.get(arguments) 
 
 print('Choose one of this items by knowing the number:\n ')
 
-#Se crea la variable arguments, en el cual el usuario elige el método a convertir el texto
 arguments = {
     1: 'lowercase',
     2: 'uppercase',
@@ -34,7 +37,6 @@ arguments = {
 
 print(sorted(arguments.items()),' \n')
 
-#Se crea un statement(bucle) en el que si el usuario no dijita algo lo vuelva a ejecutar
 while True:
     try:
         arguments = int(input('Insert the the item number here: '))
@@ -42,7 +44,7 @@ while True:
     except ValueError:
         continue
     else:
-        text = (methods(arguments)) #La funcion methods se muestra cuanto con el argumento que la persona le da, el texto ya es convertido
+        text = (methods(arguments))
         print('Text has been copied to clipboard!:\n', text,'\n')
         break
         
