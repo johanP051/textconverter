@@ -53,11 +53,20 @@ while True:
         break
         
 pyperclip.copy(text)
-exec_ = input('Do you want to continue? Y/n ~ ')
-while exec_ == '':
-    exec_ = input('Do you want to continue? Y/n ~ ')
-else:
-    if exec_ == 'Y' or exec_ == 'y':
-        os.system('python3 ' + __file__)
+
+while True:
+    try:
+        exec_ = input('Do you want to continue? Y/n ~ ')
+    except ValueError:
+        print('Must be str')
+        continue
+    if exec_ == '':
+        print('Insert something')
+        continue
     else:
+        break
+
+if exec_ == 'Y' or exec_ == 'y':
+        os.system('python3 ' + __file__)
+else:
         print('See you later...')
