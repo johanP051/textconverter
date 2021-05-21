@@ -23,7 +23,7 @@ def methods(arguments):
         5: text.capitalize()
     }
     
-    return switcher.get(arguments) 
+    return switcher.get(arguments)
 
 print('Choose one of this items by knowing the number:\n ')
 
@@ -40,8 +40,12 @@ print(sorted(arguments.items()),' \n')
 while True:
     try:
         arguments = int(input('Insert the the item number here: '))
-     
+    
     except ValueError:
+        continue
+
+    if arguments not in range(1, 5):
+        print('Item number must be in range (1, 5)')
         continue
     else:
         text = (methods(arguments))
