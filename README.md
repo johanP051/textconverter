@@ -1,12 +1,12 @@
 # textconverter
 
-## INSTALLATION
+## Installation
 ```
 git clone https://github.com/johanP051/textconverter.git
 pip3 install pyperclip
 ```
 
-# USAGE
+# Usage
 ```
 python3 text.py
 ```
