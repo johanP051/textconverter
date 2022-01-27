@@ -8,6 +8,7 @@ pip3 install pyperclip
 
 # Usage
 ```
+cd textconverter
 python3 text.py
 ```
 
